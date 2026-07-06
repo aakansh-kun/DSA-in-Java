@@ -22,7 +22,6 @@ class Array1 {
                 System.out.println("Marks found at index " + i);
                 break;
             }
-            System.out.println("Marks not found");
         }
         sc.close();
     }
