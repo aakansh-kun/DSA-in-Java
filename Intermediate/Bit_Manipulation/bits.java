@@ -1,5 +1,7 @@
 package Intermediate.Bit_Manipulation;
 
+import java.util.Scanner;
+
 //get 3rd bit(position = 2) of a number n (perform and)
 public class bits {
     public static void main(String[] args) {
@@ -24,5 +26,33 @@ public class bits {
         int bitMask2 = 1 << pos2;
         n2 = n2 & ~bitMask2;
         System.out.println(n2);
+
+        // update the 3rd bit (position = 2) of the number n to (for 0, use and with not
+        // and for 1, use or)
+        int pos3 = 2;
+        int n3 = 5;
+        int bitMask3 = 1 << pos3;
+        n3 = n3 & ~bitMask3;
+        System.out.println("after updating to 0: " + n3);
+        n3 = n3 | bitMask3;
+        System.out.println("after updating to 1: " + n3);
+        // doing together
+        System.out.println("Enter the operation: ");
+        Scanner sc = new Scanner(System.in);
+        int oper = sc.nextInt();
+        int n4 = 5;
+        int pos4 = 1;
+        if (oper == 0) {
+            // update to 0
+            int bitMask4 = 1 << pos4;
+            n4 = n4 & ~bitMask4;
+            System.out.println(n4);
+        } else {
+            // update to 1
+            int bitMask4 = 1 << pos4;
+            n4 = n4 | bitMask4;
+            System.out.println(n4);
+        }
+        sc.close();
     }
 }
